@@ -54,7 +54,9 @@ public class BackgroundImagePlugin implements ApplicationComponent, Configurable
         theConfiguration = (BackgroundImageConfiguration) application.getComponent(BackgroundImageConfiguration.class);
 
         if (theConfiguration.filename.equalsIgnoreCase("")) {
-            theConfiguration.filename = "http://i.imdb.com/Photos/Ss/0266543/Nemo102.jpg";
+            // theConfiguration.filename = "http://i.imdb.com/Photos/Ss/0266543/Nemo102.jpg";
+            // 原图片链接地址已经404,暂用下面地址代替,否则启动报异常
+            theConfiguration.filename = "http://cdn.iciba.com/news/word/big_20180102b.jpg";
             theConfiguration.localFile = false;
         }
 
